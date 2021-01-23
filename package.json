@@ -1,0 +1,23 @@
+{
+  "name": "app-pokemon-api",
+  "version": "1.0.0",
+  "description": "This is a project made with JavaScript and the PokéAPI",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "JavaScript",
+    "Pokemon",
+    "API",
+    "PokéAPI",
+    "API",
+    "Pokémon"
+  ],
+  "author": "Federico Tejedor Llorente",
+  "license": "ISC"
+}

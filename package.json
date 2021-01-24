@@ -4,11 +4,11 @@
   "description": "This is a project made with JavaScript and the PokéAPI",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "main": "node main.js"
   },
   "repository": {
     "type": "git",
-    "url": "yes"
+    "url": ""
   },
   "keywords": [
     "JavaScript",
@@ -19,5 +19,8 @@
     "Pokémon"
   ],
   "author": "Federico Tejedor Llorente",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }

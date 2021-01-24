@@ -4,7 +4,8 @@
   "description": "This is a project made with JavaScript and the PokéAPI",
   "main": "main.js",
   "scripts": {
-    "main": "node main.js"
+    "main": "node main.js",
+    "data": "node data.js"
   },
   "repository": {
     "type": "git",

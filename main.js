@@ -7,10 +7,12 @@ function fetchData(url_api, callback) {
     xhttp.onreadystatechange = function() {
         if(xhttp.readyState === 4) {
             if(xhttp.status === 200) {
+                // error1 = null, data1 = JSON.parse(xhttp.responseText)
                 callback(null, JSON.parse(xhttp.responseText));
             }
         } else {
             const error = new Error("Error " + url_api);
+            // error1 = error, data1 = null
             return callback(error, null);
         }
     };

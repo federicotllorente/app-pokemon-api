@@ -1,4 +1,4 @@
-export const createCards = (pokemon, data2) => {
+export const createCards = (pokemon, data2, pokemonCount) => {
     const wrapper = document.getElementById("wrapper");
 
     // Create HTML elements
@@ -83,23 +83,43 @@ export const createCards = (pokemon, data2) => {
     pokemonHeightTitle.appendChild(pokemonHeightTitleText);
     pokemonCardDescription.appendChild(pokemonHeightTitle);
 
-    const pokemonHeight = document.createTextNode(data2.height);
-    pokemonHeightP.appendChild(pokemonHeight);
+    let pokemonHeight = data2.height / 10; // In meters
+    let pokemonHeightFeet = pokemonHeight * 3.281;
+    let pokemonHeightFeetRounded = Math.round(pokemonHeight * 3.281);
+    let a1 = `${pokemonHeightFeet}`;
+    let a2 = a1.substring(1);
+    let a3 = `0${a2}`;
+    let pokemonHeightInches = Math.round(a3 * 12);
+    const pokemonHeightText = document.createTextNode(`${pokemonHeightFeetRounded}'${pokemonHeightInches} ft`);
+    pokemonHeightP.appendChild(pokemonHeightText);
     pokemonCardDescription.appendChild(pokemonHeightP);
 
     // Pokémon weight
     const pokemonWeightTitleText = document.createTextNode("Weight");
     pokemonWeightTitle.appendChild(pokemonWeightTitleText);
     pokemonCardDescription.appendChild(pokemonWeightTitle);
-
-    const pokemonWeight = document.createTextNode(data2.weight);
-    pokemonWeightP.appendChild(pokemonWeight);
+    
+    let pokemonWeight = data2.weight / 10; // In kgs
+    let pokemonWeightPounds = Math.round(pokemonWeight * 2.205);
+    const pokemonWeightText = document.createTextNode(`${pokemonWeightPounds} lbs`);
+    pokemonWeightP.appendChild(pokemonWeightText);
     pokemonCardDescription.appendChild(pokemonWeightP);
 
     // Adding items to the wrapper
     pokemonCard.appendChild(pokemonCardImage);
     pokemonCard.appendChild(pokemonCardDescription);
     wrapper.appendChild(pokemonCard);
+
+    // Image
+    let pokemonImageSRC;
+    if(pokemonCount > 0 && pokemonCount <= 9) {
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokemonCount}.png`;
+    } else if(pokemonCount >= 10 && pokemonCount <= 99) {
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/0${pokemonCount}.png`;
+    } else {
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonCount}.png`;
+    }
+    pokemonCardImage.style.backgroundImage = `url(${pokemonImageSRC})`;
 };
 
 export default createCards;

@@ -16,6 +16,8 @@
         top: -40px;
         left: 7vw;
         background-color: $altSecondaryColor;
+        background-size: contain;
+        background-position: center center;
         border-radius: 20px;
         box-shadow: 0 0 10px 20px $altSecondaryColorShadow;
     }

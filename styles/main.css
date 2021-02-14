@@ -27,6 +27,8 @@
   top: -40px;
   left: 7vw;
   background-color: #95c5ff;
+  background-size: contain;
+  background-position: center center;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 10px 20px rgba(149, 197, 255, 0.1);
           box-shadow: 0 0 10px 20px rgba(149, 197, 255, 0.1);

@@ -1,4 +1,4 @@
-export const createCards = (pokemon, data2, pokemonCount) => {
+export const createCards = (pokemon, data2) => {
     const wrapper = document.getElementById("wrapper");
 
     // Create HTML elements
@@ -111,13 +111,14 @@ export const createCards = (pokemon, data2, pokemonCount) => {
     wrapper.appendChild(pokemonCard);
 
     // Image
+    const pokemonID = data2.id;
     let pokemonImageSRC;
-    if(pokemonCount > 0 && pokemonCount <= 9) {
-        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokemonCount}.png`;
-    } else if(pokemonCount >= 10 && pokemonCount <= 99) {
-        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/0${pokemonCount}.png`;
+    if(pokemonID > 0 && pokemonID <= 9) {
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokemonID}.png`;
+    } else if(pokemonID >= 10 && pokemonID <= 99) {
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/0${pokemonID}.png`;
     } else {
-        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonCount}.png`;
+        pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonID}.png`;
     }
     pokemonCardImage.style.backgroundImage = `url(${pokemonImageSRC})`;
 };

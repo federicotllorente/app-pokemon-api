@@ -1,0 +1,91 @@
+// Colors
+$primaryColor: rgb(240, 47, 48);
+$secondaryColor: rgb(47, 130, 240);
+$altSecondaryColor: rgb(149, 197, 255);
+$secondaryColorShadow: rgba(47, 130, 240, 0.1);
+$altSecondaryColorShadow: rgba(149, 197, 255, 0.1);
+$bgColor: #ebe4d5;
+$lightColor: #f1f1f1;
+$midColor: #adadad;
+$darkColor: #212121;
+$bgDeco1Color: rgb(244, 206, 127);
+$bgDeco2Color: rgb(245, 202, 80);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$mainFontSize: 18px;
+$mobileFontSize: 15px;
+$h1FontSize: 60px;
+$h2FontSize: 32px;
+$h3FontSize: 22px;
+$hugeFontSize: 150px;
+$mainFontFamily: "Poppins", sans-serif;
+
+// Breakpoints
+$breakpointMobile: 425px;
+$breakpointMobileLarge: 530px;
+$breakpointTabletSmall: 640px;
+$breakpointTablet: 820px;
+$breakpointTabletLarge: 920px;
+$breakpointDesktop: 1024px;
+
+// Reset default styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Importing components
+@import "cards.scss";
+
+html {
+    background-color: $bgColor;
+}
+
+body {
+    padding: 50px 8vw;
+    color: $darkColor;
+    font-family: $mainFontFamily;
+    font-size: $mainFontSize;
+    font-weight: 500;
+    h1 {
+        color: $secondaryColor;
+        font-size: $h1FontSize;
+        font-weight: 500;
+    }
+    h2 {
+        color: $secondaryColor;
+        font-size: $h2FontSize;
+        font-weight: 500;
+        > & {
+            text-align: center;
+        }
+    }
+    h3 {
+        color: $secondaryColor;
+        font-size: $h3FontSize;
+        font-weight: 500;
+    }
+    h4 {
+        color: $secondaryColor;
+        font-size: $mainFontSize;
+        font-weight: 500;
+    }
+    a {
+        color: $secondaryColor;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: 0.2s;
+        &:hover {
+            background-color: $altSecondaryColor;
+        }
+    }
+}
+
+header {
+    text-align: center;
+    padding: 0 0 20px;
+    h2 {
+        color: $primaryColor;
+    }
+}

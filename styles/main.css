@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pokemon_card {
+  width: 84vw;
+  margin-top: 70px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2f82f0;
+  color: #f1f1f1;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 20px rgba(47, 130, 240, 0.1);
+          box-shadow: 0 0 10px 20px rgba(47, 130, 240, 0.1);
+}
+
+.pokemon_card__image {
+  width: 70vw;
+  height: 56vw;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: -40px;
+  left: 7vw;
+  background-color: #95c5ff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 20px rgba(149, 197, 255, 0.1);
+          box-shadow: 0 0 10px 20px rgba(149, 197, 255, 0.1);
+}
+
+.pokemon_card__description {
+  margin-top: -40px;
+  padding-top: 56vw;
+}
+
+.pokemon_card__description h4 {
+  padding: 10px 0 0;
+  color: #adadad;
+}
+
+.pokemon_card__description ul li {
+  list-style: none;
+}
+
+.pokemon_card__description__name {
+  padding: 0;
+  color: #f1f1f1;
+}
+
+html {
+  background-color: #ebe4d5;
+}
+
+body {
+  padding: 50px 8vw;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body h1 {
+  color: #2f82f0;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+body h2 {
+  color: #2f82f0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+> body h2 {
+  text-align: center;
+}
+
+body h3 {
+  color: #2f82f0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+body h4 {
+  color: #2f82f0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body a {
+  color: #2f82f0;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body a:hover {
+  background-color: #95c5ff;
+}
+
+header {
+  text-align: center;
+  padding: 0 0 20px;
+}
+
+header h2 {
+  color: #f02f30;
+}
+/*# sourceMappingURL=main.css.map */

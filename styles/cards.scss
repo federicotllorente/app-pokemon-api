@@ -1,0 +1,37 @@
+.pokemon_card {
+    width: 84vw;
+    margin-top: 70px;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: $secondaryColor;
+    color: $lightColor;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 20px $secondaryColorShadow;
+    &__image {
+        width: 70vw;
+        height: 56vw;
+        position: absolute;
+        box-sizing: border-box;
+        top: -40px;
+        left: 7vw;
+        background-color: $altSecondaryColor;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 20px $altSecondaryColorShadow;
+    }
+    &__description {
+        margin-top: -40px;
+        padding-top: 56vw;
+        h4 {
+            padding: 10px 0 0;
+            color: $midColor;
+        }
+        ul li {
+            list-style: none;
+        }
+        &__name {
+            padding: 0;
+            color: $lightColor;
+        }
+    }
+}

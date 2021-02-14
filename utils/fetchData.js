@@ -1,6 +1,6 @@
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+// let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-const fetchData = (url_api) => {
+export const fetchData = (url_api) => {
     return new Promise((resolve, reject) => {
         const xhttp = new XMLHttpRequest();
         xhttp.open("GET", url_api, true);
@@ -17,4 +17,5 @@ const fetchData = (url_api) => {
     });
 };
 
-module.exports = fetchData;
+// module.exports = fetchData;
+export default fetchData;

@@ -20,7 +20,7 @@
 
 .pokemon_card__image {
   width: 70vw;
-  height: 56vw;
+  height: 70vw;
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -34,7 +34,7 @@
 
 .pokemon_card__description {
   margin-top: -40px;
-  padding-top: 56vw;
+  padding-top: 70vw;
 }
 
 .pokemon_card__description h4 {

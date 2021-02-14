@@ -10,7 +10,7 @@
     box-shadow: 0 0 10px 20px $secondaryColorShadow;
     &__image {
         width: 70vw;
-        height: 56vw;
+        height: 70vw;
         position: absolute;
         box-sizing: border-box;
         top: -40px;
@@ -21,7 +21,7 @@
     }
     &__description {
         margin-top: -40px;
-        padding-top: 56vw;
+        padding-top: 70vw;
         h4 {
             padding: 10px 0 0;
             color: $midColor;

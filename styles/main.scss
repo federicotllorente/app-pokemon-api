@@ -23,11 +23,11 @@ $mainFontFamily: "Poppins", sans-serif;
 
 // Breakpoints
 $breakpointMobile: 425px;
-$breakpointMobileLarge: 530px;
-$breakpointTabletSmall: 640px;
-$breakpointTablet: 820px;
-$breakpointTabletLarge: 920px;
-$breakpointDesktop: 1024px;
+// $breakpointMobileLarge: 530px;
+// $breakpointTabletSmall: 640px;
+$breakpointTablet: 768px;
+// $breakpointTabletLarge: 920px;
+// $breakpointDesktop: 1024px;
 
 // Reset default styles
 * {
@@ -91,5 +91,14 @@ header {
     padding: 0 0 20px;
     h2 {
         color: $primaryColor;
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    body {
+        padding: 5vw 8vw;
+    }
+    header {
+        padding: 0 0 5vw;
     }
 }

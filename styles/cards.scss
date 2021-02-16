@@ -37,3 +37,29 @@
         }
     }
 }
+
+@media (min-width: $breakpointTablet) {
+    .pokemon_card {
+        display: flex;
+        width: 76vw;
+        margin: 0 0 15vw 8vw;
+        padding: 0;
+        &:first-of-type {
+            margin: 5vw 0 15vw 8vw;
+        }
+        &__image {
+            margin: -8vw 0 -8vw -8vw;
+            width: 45vw;
+            height: 66vw;
+            position: initial;
+            align-self: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &__description {
+            min-height: 50vw;
+            margin-top: 0;
+            padding: 20px;
+        }
+    }
+}

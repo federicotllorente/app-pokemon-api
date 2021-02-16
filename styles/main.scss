@@ -26,7 +26,8 @@ $breakpointMobile: 425px;
 // $breakpointMobileLarge: 530px;
 // $breakpointTabletSmall: 640px;
 $breakpointTablet: 768px;
-// $breakpointTabletLarge: 920px;
+$breakpointDesktop: 900px;
+$breakpointDesktop2: 980px;
 // $breakpointDesktop: 1024px;
 
 // Reset default styles
@@ -100,5 +101,14 @@ header {
     }
     header {
         padding: 0 0 5vw;
+    }
+}
+
+@media (min-width: $breakpointDesktop2) {
+    body {
+        padding: 50px 100px;
+    }
+    header {
+        padding: 0 0 50px;
     }
 }

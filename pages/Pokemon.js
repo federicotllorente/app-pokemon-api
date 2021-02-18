@@ -1,4 +1,4 @@
-const Home = () => {
+const Pokemon = () => {
     // const view = `
     //     <div id="wrapper" class="wrapper"></div>
     // `;
@@ -6,4 +6,4 @@ const Home = () => {
     return view;
 };
 
-export default Home;
+export default Pokemon;

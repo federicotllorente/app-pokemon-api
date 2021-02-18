@@ -1,5 +1,7 @@
-import {fetchData} from "./utils/fetchData.js";
-import {createCards} from "./utils/createCards.js";
+// This file is no longer necessary. Now, this function is in utils/fetchData.js.
+
+import fetchData from "./utils/fetchData.js";
+import createCards from "./utils/createCards.js";
 const API = "https://pokeapi.co/api/v2/pokemon/";
 let nextAPIurl;
 

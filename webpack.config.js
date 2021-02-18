@@ -28,13 +28,13 @@ module.exports = {
     },
     // Used plugins
     plugins: [
-        new HtmlWebpackPlugin([
+        new HtmlWebpackPlugin(
             {
                 inject: true,
                 // Main template
                 template: "./public/index.html",
                 filename: "index.html"
             }
-        ])
+        )
     ]
 }

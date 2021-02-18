@@ -124,6 +124,9 @@ export const createCards = (pokemon, data2) => {
             pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonID}.png`;
         }
         pokemonCardImage.style.backgroundImage = `url(${pokemonImageSRC})`;
+
+        // Open card
+        pokemonCard.classList.add("pokemon_card--open");
     }
 };
 

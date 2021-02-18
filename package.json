@@ -1,15 +1,17 @@
 {
   "name": "app-pokemon-api",
   "version": "1.0.0",
-  "description": "This is a project made with JavaScript and the PokéAPI",
-  "main": "main.js",
+  "description": "SPA (Single Page Application) made with Vanilla JavaScript and the PokéAPI",
+  "main": "index.js",
   "scripts": {
-    "main": "node main.js",
-    "data": "node data.js"
+    "main": "node index.js",
+    "data": "node data.js",
+    "build": "webpack --mode production",
+    "start": "webpack-cli serve --mode development"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/federicotllorente/app-pokemon-api"
   },
   "keywords": [
     "JavaScript",
@@ -23,5 +25,13 @@
   "license": "ISC",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.1.0",
+    "webpack": "^5.22.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

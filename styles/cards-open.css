@@ -1,0 +1,18 @@
+.pokemon_card--open {
+  width: initial;
+  margin-top: 40px;
+  padding: 8vw;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pokemon_card--open .pokemon_card__image {
+  width: 84vw;
+  height: 84vw;
+  left: 8vw;
+}
+
+.pokemon_card--open .pokemon_card__description {
+  padding-top: 84vw;
+}
+/*# sourceMappingURL=cards-open.css.map */

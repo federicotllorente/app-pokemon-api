@@ -1,0 +1,58 @@
+.pokemon_card--open {
+    @extend .pokemon_card;
+    width: initial;
+    margin-top: 40px;
+    padding: 8vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    .pokemon_card__image {
+        width: 84vw;
+        height: 84vw;
+        left: 8vw;
+    }
+    .pokemon_card__description {
+        padding-top: 84vw;
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .pokemon_card--open {
+        margin: 0 8vw 0;
+        padding: 20px;
+        &:first-of-type {
+            margin: 0 8vw 0;
+        }
+        .pokemon_card__image {
+            width: 40vw;
+            height: 40vw;
+            margin: -40px 0 0 20px;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        .pokemon_card__description {
+            min-height: initial;
+            padding: 20px;
+            margin-left: 40vw;
+        }
+    }
+}
+
+@media (min-width: $breakpointDesktop) {
+    .pokemon_card--open {
+        max-width: initial;
+    }
+}
+
+@media (min-width: $breakpointDesktop2) {
+    .pokemon_card--open {
+        margin: 0 8vw 0;
+        max-width: initial;
+        &:first-of-type {
+            margin: 0 8vw 0;
+        }
+        .pokemon_card__description {
+            height: initial;
+        }
+    }
+}

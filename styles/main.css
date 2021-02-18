@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.pokemon_card {
+.pokemon_card, .pokemon_card--open {
   width: 84vw;
   margin-top: 70px;
   padding: 20px;
@@ -55,7 +55,7 @@
 }
 
 @media (min-width: 768px) {
-  .pokemon_card {
+  .pokemon_card, .pokemon_card--open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -63,7 +63,7 @@
     margin: 0 0 15vw 8vw;
     padding: 0;
   }
-  .pokemon_card:first-of-type {
+  .pokemon_card:first-of-type, .pokemon_card--open:first-of-type {
     margin: 5vw 0 15vw 8vw;
   }
   .pokemon_card__image {
@@ -85,11 +85,11 @@
 }
 
 @media (min-width: 900px) {
-  .pokemon_card {
+  .pokemon_card, .pokemon_card--open {
     margin: 0 auto 12vw;
     max-width: 650px;
   }
-  .pokemon_card:first-of-type {
+  .pokemon_card:first-of-type, .pokemon_card--open:first-of-type {
     margin: 4vw auto 12vw;
   }
   .pokemon_card__image {
@@ -105,11 +105,11 @@
 }
 
 @media (min-width: 980px) {
-  .pokemon_card {
+  .pokemon_card, .pokemon_card--open {
     margin: 0 auto 100px;
     max-width: 650px;
   }
-  .pokemon_card:first-of-type {
+  .pokemon_card:first-of-type, .pokemon_card--open:first-of-type {
     margin: 30px auto 100px;
   }
   .pokemon_card__image {
@@ -129,8 +129,72 @@
   }
 }
 
+.pokemon_card--open {
+  width: initial;
+  margin-top: 40px;
+  padding: 8vw;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pokemon_card--open .pokemon_card__image {
+  width: 84vw;
+  height: 84vw;
+  left: 8vw;
+}
+
+.pokemon_card--open .pokemon_card__description {
+  padding-top: 84vw;
+}
+
+@media (min-width: 768px) {
+  .pokemon_card--open {
+    margin: 0 8vw 0;
+    padding: 20px;
+  }
+  .pokemon_card--open:first-of-type {
+    margin: 0 8vw 0;
+  }
+  .pokemon_card--open .pokemon_card__image {
+    width: 40vw;
+    height: 40vw;
+    margin: -40px 0 0 20px;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  .pokemon_card--open .pokemon_card__description {
+    min-height: initial;
+    padding: 20px;
+    margin-left: 40vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .pokemon_card--open {
+    max-width: initial;
+  }
+}
+
+@media (min-width: 980px) {
+  .pokemon_card--open {
+    margin: 0 8vw 0;
+    max-width: initial;
+  }
+  .pokemon_card--open:first-of-type {
+    margin: 0 8vw 0;
+  }
+  .pokemon_card--open .pokemon_card__description {
+    height: initial;
+  }
+}
+
 html {
   background-color: #ebe4d5;
+  background-image: url(../img/BG_img.png);
+  background-size: auto;
+  background-position: center -200px;
+  background-repeat: repeat-y;
 }
 
 body {
@@ -139,10 +203,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  background-image: url(../img/BG_img.png);
-  background-size: auto;
-  background-position: center -200px;
-  background-repeat: repeat-y;
 }
 
 body h1 {
@@ -185,13 +245,64 @@ body a:hover {
   background-color: #95c5ff;
 }
 
+body.body--card_open {
+  padding: 20px 0 0;
+}
+
 header {
   text-align: center;
   padding: 0 0 20px;
 }
 
-header h2 {
+header .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .title a {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+header .title a img {
+  width: auto;
+  height: 20px;
+}
+
+header .title h2 {
   color: #f02f30;
+}
+
+header.header--card_open {
+  padding: 0 0 20px;
+}
+
+header.header--card_open .title a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header--card_open p {
+  display: none;
+}
+
+.pageError {
+  text-align: center;
+  padding: 20px 0 0;
 }
 
 @media (min-width: 768px) {
@@ -200,6 +311,12 @@ header h2 {
   }
   header {
     padding: 0 0 5vw;
+  }
+  header.header--card_open {
+    padding: 0 0 60px;
+  }
+  .pageError {
+    padding: 0;
   }
 }
 

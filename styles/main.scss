@@ -23,12 +23,9 @@ $mainFontFamily: "Poppins", sans-serif;
 
 // Breakpoints
 $breakpointMobile: 425px;
-// $breakpointMobileLarge: 530px;
-// $breakpointTabletSmall: 640px;
 $breakpointTablet: 768px;
 $breakpointDesktop: 900px;
 $breakpointDesktop2: 980px;
-// $breakpointDesktop: 1024px;
 
 // Reset default styles
 * {
@@ -38,9 +35,14 @@ $breakpointDesktop2: 980px;
 
 // Importing components
 @import "cards.scss";
+@import "cards-open.scss";
 
 html {
     background-color: $bgColor;
+    background-image: url(../img/BG_img.png);
+    background-size: auto;
+    background-position: center -200px;
+    background-repeat: repeat-y;
 }
 
 body {
@@ -49,10 +51,6 @@ body {
     font-family: $mainFontFamily;
     font-size: $mainFontSize;
     font-weight: 500;
-    background-image: url(../img/BG_img.png);
-    background-size: auto;
-    background-position: center -200px;
-    background-repeat: repeat-y;
     h1 {
         color: $secondaryColor;
         font-size: $h1FontSize;
@@ -85,14 +83,47 @@ body {
             background-color: $altSecondaryColor;
         }
     }
+    &.body--card_open {
+        padding: 20px 0 0;
+    }
 }
 
 header {
     text-align: center;
     padding: 0 0 20px;
-    h2 {
-        color: $primaryColor;
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            img {
+                width: auto;
+                height: 20px;
+            }
+        }
+        h2 {
+            color: $primaryColor;
+        }
     }
+    &.header--card_open {
+        padding: 0 0 20px;
+        .title a {
+            display: flex;
+        }
+        p {
+            display: none;
+        }
+    }
+}
+
+// Error pages
+.pageError {
+    text-align: center;
+    padding: 20px 0 0;
 }
 
 @media (min-width: $breakpointTablet) {
@@ -101,6 +132,12 @@ header {
     }
     header {
         padding: 0 0 5vw;
+        &.header--card_open {
+            padding: 0 0 60px;
+        }
+    }
+    .pageError {
+        padding: 0;
     }
 }
 

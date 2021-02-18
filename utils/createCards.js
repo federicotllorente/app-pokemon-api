@@ -1,8 +1,10 @@
-export const createCards = (pokemon, data2) => {
+export const createCards = (pokemon, data2, openedCard) => {
     const wrapper = document.getElementById("wrapper");
+    // Making sure that the Pokémon doesn't exist already
     let existentPokemonCards = document.querySelectorAll(`.${pokemon.name}`);
     if(existentPokemonCards.length == 0) {
         // Create HTML elements
+        const pokemonCardAnchor = document.createElement("a");
         const pokemonCard = document.createElement("div");
         const pokemonCardImage = document.createElement("div");
         const pokemonCardDescription = document.createElement("div");
@@ -108,13 +110,17 @@ export const createCards = (pokemon, data2) => {
         pokemonWeightP.appendChild(pokemonWeightText);
         pokemonCardDescription.appendChild(pokemonWeightP);
 
+        // Anchor properties
+        const pokemonID = data2.id;
+        pokemonCardAnchor.setAttribute("href", `#/${pokemonID}`);
+
         // Adding items to the wrapper
         pokemonCard.appendChild(pokemonCardImage);
         pokemonCard.appendChild(pokemonCardDescription);
-        wrapper.appendChild(pokemonCard);
+        pokemonCardAnchor.appendChild(pokemonCard);
+        wrapper.appendChild(pokemonCardAnchor);
 
         // Image
-        const pokemonID = data2.id;
         let pokemonImageSRC;
         if(pokemonID > 0 && pokemonID <= 9) {
             pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokemonID}.png`;
@@ -125,8 +131,22 @@ export const createCards = (pokemon, data2) => {
         }
         pokemonCardImage.style.backgroundImage = `url(${pokemonImageSRC})`;
 
-        // Open card
-        // pokemonCard.classList.add("pokemon_card--open");
+        // Open/"closed" card styles
+        let body = document.querySelector("body");
+        let header = document.querySelector("header");
+        if(openedCard) {
+            // If the current page is a Pokémon one
+            pokemonCard.classList.remove("pokemon_card");
+            pokemonCard.classList.add("pokemon_card--open");
+            body.classList.add("body--card_open");
+            header.classList.add("header--card_open");
+        } else {
+            // If it's the Homepage or another page
+            pokemonCard.classList.remove("pokemon_card--open");
+            body.classList.remove("body--card_open");
+            header.classList.remove("header--card_open");
+            pokemonCard.classList.add("pokemon_card");
+        }
     }
 };
 

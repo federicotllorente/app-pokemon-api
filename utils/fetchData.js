@@ -18,7 +18,7 @@ const fetchData = (url_api) => {
     });
 };
 
-const fetchingData = async (url_api) => {
+export const fetchingData = async (url_api) => {
     try {
         // Fetch the main data
         const data1 = await fetchData(url_api);
@@ -27,7 +27,7 @@ const fetchingData = async (url_api) => {
             // Fetch the data of each pokemon
             const data2 = await fetchData(pokemon.url);
             // Create the cards with HTML
-            createCards(pokemon, data2);
+            createCards(pokemon, data2, false);
         }
         // For the new data when the user scroll until the bottom of the page
         nextAPIurl = data1.next;
@@ -44,4 +44,13 @@ const fetchingData = async (url_api) => {
     }
 };
 
-export default fetchingData;
+export const fetchingData2 = async (url_api) => {
+    try {
+        // Fetch a single pokémon data
+        const data = await fetchData(url_api);
+        // Create the opened card with HTML
+        createCards(data, data, true);
+    } catch(error) {
+        console.error(error);
+    }
+};

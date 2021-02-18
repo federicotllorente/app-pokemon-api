@@ -1,7 +1,7 @@
 const Header = () => {
     const view = `
         <div class="title">
-            <a href="#">
+            <a href="/">
                 <img src="img/return_arrow.png">
             </a>
             <h2>Pokédex</h2>

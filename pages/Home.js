@@ -1,9 +1,9 @@
+import { fetchingData } from "../utils/fetchData";
+const API = "https://pokeapi.co/api/v2/pokemon/";
+
 const Home = () => {
-    // const view = `
-    //     <div id="wrapper" class="wrapper"></div>
-    // `;
-    const view = "";
-    return view;
+    wrapper.innerHTML = "";
+    fetchingData(API);
 };
 
 export default Home;

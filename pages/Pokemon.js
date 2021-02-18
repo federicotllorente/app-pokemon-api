@@ -1,9 +1,9 @@
-const Pokemon = () => {
-    // const view = `
-    //     <div id="wrapper" class="wrapper"></div>
-    // `;
-    const view = "";
-    return view;
+import { fetchingData2 } from "../utils/fetchData";
+const API = "https://pokeapi.co/api/v2/pokemon/";
+
+const Pokemon = hash => {
+    wrapper.innerHTML = "";
+    fetchingData2(`${API}${hash}/`);
 };
 
 export default Pokemon;

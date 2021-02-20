@@ -113,6 +113,9 @@ header {
         padding: 0 0 20px;
         .title a {
             display: flex;
+            &:hover {
+                background-color: initial;
+            }
         }
         p {
             display: none;

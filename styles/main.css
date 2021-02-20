@@ -129,6 +129,10 @@
   }
 }
 
+.body--card_open .wrapper > a {
+  display: none;
+}
+
 .pokemon_card--open {
   width: initial;
   margin-top: 40px;
@@ -294,6 +298,10 @@ header.header--card_open .title a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header.header--card_open .title a:hover {
+  background-color: initial;
 }
 
 header.header--card_open p {

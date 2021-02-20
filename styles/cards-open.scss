@@ -1,3 +1,9 @@
+.body--card_open {
+    .wrapper > a {
+        display: none;
+    }
+}
+
 .pokemon_card--open {
     @extend .pokemon_card;
     width: initial;

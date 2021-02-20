@@ -26,13 +26,18 @@ const router = async () => {
         await render(hash);
     } else {
         // Reset the styles
+
         let body = document.querySelector("body");
         let header = document.querySelector("header");
+
         // let pokemonCards = document.querySelectorAll("pokemon_card--open");
+
         body.classList.remove("body--card_open");
         header.classList.remove("header--card_open");
+
         // pokemonCards.classList.remove("pokemon_card--open");
         // pokemonCards.classList.add("pokemon_card");
+
         // Show the error 404
         render = Error404;
         wrapper.innerHTML = await render();

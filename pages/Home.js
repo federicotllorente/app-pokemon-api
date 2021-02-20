@@ -1,4 +1,5 @@
 import getData from "../utils/getData";
+import getHash from "../utils/getHash";
 const urlAPI = "https://pokeapi.co/api/v2/pokemon/";
 
 const Home = async () => {
@@ -52,7 +53,7 @@ const Home = async () => {
                 
                 wrapper.innerHTML += `
                     <a href="#/${pokemonID}">
-                        <div class="pokemon_card ${pokemon.name}">
+                        <div id="${pokemonID}" class="pokemon_card ${pokemon.name}">
                             <div class="pokemon_card__image" style="background-image: url(${pokemonImageSRC});"></div>
                             <div class="pokemon_card__description">
                                 <h3 class="pokemon_card__description__name">${pokemonNameTextCapitalized}</h3>

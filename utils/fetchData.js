@@ -1,3 +1,5 @@
+// This file is no longer necessary. Now, there's a new function in getData.js.
+
 import createCards from "./createCards";
 let nextAPIurl;
 

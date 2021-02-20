@@ -1,3 +1,5 @@
+// This file is no longer necessary. Now, there's a function in Home.js.
+
 export const createCards = (pokemon, data2, openedCard) => {
     const wrapper = document.getElementById("wrapper");
     // Making sure that the Pokémon doesn't exist already

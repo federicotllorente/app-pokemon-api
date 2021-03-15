@@ -1,5 +1,5 @@
 import getData from "../utils/getData";
-import getHash from "../utils/getHash";
+// import getHash from "../utils/getHash";
 const urlAPI = "https://pokeapi.co/api/v2/pokemon/";
 
 const Home = async () => {
@@ -7,37 +7,37 @@ const Home = async () => {
         // Fetch the Pokémons data
         const data = await getData(myAPI);
         const pokemonResults = data.results;
-        for(let pokemonResult of pokemonResults) {
+        for (let pokemonResult of pokemonResults) {
             // Fetch the data of a single Pokémon
             const pokemon = await getData(pokemonResult.url);
             // Making sure that the Pokémon doesn't exist already
             let existentPokemonCards = document.querySelectorAll(`.${pokemon.name}`);
-            if(existentPokemonCards.length == 0) {
+            if (existentPokemonCards.length == 0) {
                 // Create the cards
                 let pokemonNameText = pokemon.name;
                 let pokemonNameTextCapitalized = pokemonNameText.charAt(0).toUpperCase() + pokemonNameText.slice(1);
                 let pokemonID = pokemon.id;
-        
+
                 // Pokémon image
                 let pokemonImageSRC;
-                if(pokemonID > 0 && pokemonID <= 9) {
+                if (pokemonID > 0 && pokemonID <= 9) {
                     pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/00${pokemonID}.png`;
-                } else if(pokemonID >= 10 && pokemonID <= 99) {
+                } else if (pokemonID >= 10 && pokemonID <= 99) {
                     pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/0${pokemonID}.png`;
                 } else {
                     pokemonImageSRC = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemonID}.png`;
                 }
-        
+
                 // Types title
                 let x = 0;
-                for(const el of pokemon.types) { x++; }
+                for (const el of pokemon.types) { x++; }
                 let pokemonTypesTitleText = x == 1 ? "Type" : "Types";
-                
+
                 // Abilities title
                 let y = 0;
-                for(const el of pokemon.abilities) { y++; }
+                for (const el of pokemon.abilities) { y++; }
                 let pokemonAbilitiesTitleText = y == 1 ? "Ability" : "Abilities";
-        
+
                 // Pokémon height
                 let pokemonHeight = pokemon.height / 10; // In meters
                 let pokemonHeightFeet = pokemonHeight * 3.281;
@@ -46,11 +46,11 @@ const Home = async () => {
                 let a2 = a1.substring(1);
                 let a3 = `0${a2}`;
                 let pokemonHeightInches = Math.round(a3 * 12);
-        
+
                 // Pokémon weight
                 let pokemonWeight = pokemon.weight / 10; // In kgs
                 let pokemonWeightPounds = Math.round(pokemonWeight * 2.205);
-                
+
                 wrapper.innerHTML += `
                     <a href="#/${pokemonID}">
                         <div id="${pokemonID}" class="pokemon_card ${pokemon.name}">
@@ -84,7 +84,7 @@ const Home = async () => {
         document.addEventListener('scroll', () => {
             let bodyHeight = document.body.offsetHeight;
             let scrollEnd = window.scrollY + window.innerHeight;
-            if(scrollEnd == bodyHeight) {
+            if (scrollEnd == bodyHeight) {
                 seePokemons(nextAPIurl);
             }
         });
@@ -94,7 +94,7 @@ const Home = async () => {
     // If there are Pokémons, fetch the new data and then show them
     const seePokemons = newUrlAPI => {
         let pokemonsYet = document.querySelectorAll(".pokemon_card");
-        if(pokemonsYet.length == 0) {
+        if (pokemonsYet.length == 0) {
             getPokemons(urlAPI);
         } else {
             getPokemons(newUrlAPI);

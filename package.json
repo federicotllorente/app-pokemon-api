@@ -7,7 +7,8 @@
     "main": "node index.js",
     "data": "node data.js",
     "build": "webpack --mode production",
-    "start": "webpack-cli serve --mode development"
+    "start": "webpack-cli serve --mode production",
+    "start:dev": "webpack-cli serve --mode development"
   },
   "repository": {
     "type": "git",

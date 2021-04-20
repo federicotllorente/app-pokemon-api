@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a Single Page Application created with Vanilla JavaScript and the Pokémon API 'PokéAPI', available in [https://pokeapi.co/](https://pokeapi.co/).
+This is a Single Page Application created with Vanilla JavaScript and the Pokémon API 'PokéAPI', available in [https://pokeapi.co/](https://pokeapi.co/). Also, if you want to see and test this project, it is available in [https://pokedex.federicotllorente.work/](https://pokedex.federicotllorente.work/).
 
 ## Starting with this project
 
@@ -18,7 +18,7 @@ Thank you so much for your attention! I hope you like this project. See you codi
 
 ## Introducción (ESP)
 
-Esta es una SPA (Single Page Application) creada con JavaScript Vanilla y la API de Pokémon "PokéAPI", disponible en [https://pokeapi.co/](https://pokeapi.co/).
+Esta es una SPA (Single Page Application) creada con JavaScript Vanilla y la API de Pokémon "PokéAPI", disponible en [https://pokeapi.co/](https://pokeapi.co/). También, si quieres ver y testear este proyecto, está disponible en [https://pokedex.federicotllorente.work/](https://pokedex.federicotllorente.work/).
 
 ## Comenzando con este proyecto
 
